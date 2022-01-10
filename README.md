@@ -2,11 +2,7 @@
 
 Scraping script and view file for Lost Vault mobile game.
 
-If you'd like to try the game by yourself, feel free to use my promo code: IDLBFH
-
-You'll get some free coins (and I'll receive some too!)
-
-# Ok, but how into running this?
+# Ok, but how to run this?
 
 Get Python3, and provide neccessary dependencies:
 
