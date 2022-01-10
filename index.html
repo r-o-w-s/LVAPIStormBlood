@@ -71,16 +71,6 @@ $(function() {
             `<td id="ach_attr_survival_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.ach_attributes.survival}>` + h.ach_attributes.survival + "</td>" +
             "</tr>"
           $(attrRow).appendTo("#player_attributes tbody");
-
-          var extAttrRow = "<tr>" +
-            "<td class='font-black'>" + h.name+ "</td>" +
-            
-          $(extAttrRow).appendTo("#player_ext_attributes tbody");
-
-          var resRow = "<tr>" +
-            "<td class='font-black'>" + h.name+ "</td>" +
-          
-          $(resRow).appendTo("#player_res_attributes tbody");
         });
 
         $.each(data.tribes, function(g, h) {
@@ -277,8 +267,6 @@ $(function() {
     ],
 
         $('#player_attributes').DataTable({dom: "lfrtip", language: language, lengthMenu: lengthMenu});
-        $('#player_ext_attributes').DataTable({dom: "lfrtip", language: language, lengthMenu: lengthMenu});
-        $('#player_res_attributes').DataTable({dom: "lfrtip", language: language, lengthMenu: lengthMenu});
         $('#tribes').DataTable({dom: "lfrtip", language: language, lengthMenu: lengthMenu, order: [[4, "asc"]]});
 
    } );}, 400);
@@ -359,16 +347,14 @@ $(function() {
 
     <div class="tab flex items-center justify-between">
       <div>
-        <button class="tablinks" onclick="openCity(event, 'Attributes')" id="defaultOpen">Attributes</button>
-        <button class="tablinks" onclick="openCity(event, 'Rankings')">Rankings</button>
-        <button class="tablinks" onclick="openCity(event, 'Exploration Stats')">Exploration Stats</button>
-        <button class="tablinks" onclick="openCity(event, 'Tribe Ranking')">Tribe Ranking</button>
+        <button class="tablinks" onclick="openCity(event, 'Character Stats')" id="defaultOpen">Character Stats</button>
+        <button class="tablinks" onclick="openCity(event, 'Tribe Stats')">Tribe Stats</button>
       </div>
       <span class="tablinks pr-5" id="dateTracker">Ostatnia akutalizacja: </span>
     </div>
 
 
-    <div id="Attributes" class="tabcontent">
+    <div id="Character Stats" class="tabcontent">
       <table class="table table-sm table-dark" id="player_attributes">
         <thead>
         <th>Character</th>
@@ -388,39 +374,7 @@ $(function() {
       </table>
     </div>
 
-
-    <div id="Rankings" class="tabcontent">
-      <table class ="table table-sm table-dark" id="player_ext_attributes">
-        <thead>
-        <th>Character</th>
-        <th>Level</th>
-        <th>Ranking</th>
-        <th>Fame</th>
-        <th>Power</th>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-    </div>
-
-
-    <div id="Exploration Stats" class="tabcontent">
-      <table class="table table-sm table-dark" id="player_res_attributes">
-        <thead>
-        <th>Character</th>
-        <th>Explorations</th>
-        <th>Quests</th>
-        <th>Monster Kills</th>
-        <th>Time in Caravan</th>
-        <th>Vault Level</th>
-        <th>Survival Level</th>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-    </div>
-
-    <div id="Tribe Ranking" class="tabcontent">
+    <div id="Tribe Stats" class="tabcontent">
       <table class="table table-sm table-dark" id="tribes">
         <thead>
         <th>Tribe</th>
