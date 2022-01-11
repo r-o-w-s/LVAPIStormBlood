@@ -59,7 +59,7 @@ $(function() {
         $.each(data.players, function(g, h) {
           var attrRow = "<tr>" +
             "<td class='font-black'>" + h.name+ "</td>" +
-            `<td id="attr_str_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.attributes.str}>` + (Number(h.attributes.str) + Number(h.attributes.agi) + Number(h.attributes.end) + Number(h.attributes.int) + Number(h.attributes.lck)) + "</td>" +
+            `<td id="attr_str_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.attributes.total}>` + h.attributes.total + "</td>" +
             `<td id="ext_attr_lvl_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.ext_attributes.lvl}>` + h.ext_attributes.lvl + "</td>" +
             `<td id="ext_attr_rank_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.ext_attributes.rank}>` + h.ext_attributes.rank + "</td>" +
             `<td id="ext_attr_power_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.ext_attributes.power}>` + h.ext_attributes.power + "</td>" +

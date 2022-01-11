@@ -40,8 +40,9 @@ for html in raw_htmls:
 
 
     # Attributes
-    attributes = [{attribute: soup.find(class_=f"{colour} inverted statistic").find("div", class_="value").get_text().strip().replace(',','')} for attribute, colour in attribute_colours.items()]
+    attributes = [{attribute: int(soup.find(class_=f"{colour} inverted statistic").find("div", class_="value").get_text().strip().replace(',',''))} for attribute, colour in attribute_colours.items()]
     attributes = dict(ChainMap(*attributes))
+    attributes['total']=sum(attributes.values())
     soup.find(class_="ui inverted segment").decompose()
 
     # External Attributes
