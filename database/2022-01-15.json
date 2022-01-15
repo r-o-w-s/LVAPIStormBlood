@@ -1,6 +1,6 @@
 {
     "date": "2022-01-15",
-    "precise_date": "2022-01-15, 06:14",
+    "precise_date": "2022-01-15, 06:18",
     "players": [
         {
             "name": "Runa",
@@ -403,28 +403,28 @@
             }
         },
         {
-            "name": "Endurance",
+            "name": "AndyEXOTIC",
             "attributes": {
-                "lck": 226,
-                "int": 150,
-                "end": 958,
-                "agi": 63,
-                "str": 1082,
-                "total": 2479
+                "lck": 188,
+                "int": 126,
+                "end": 1139,
+                "agi": 196,
+                "str": 1742,
+                "total": 3391
             },
             "ext_attributes": {
-                "power": "102,194",
-                "fame": "161,350",
-                "rank": "1404",
-                "lvl": "23"
+                "power": "202,725",
+                "fame": "272,653",
+                "rank": "1053",
+                "lvl": "27"
             },
             "ach_attributes": {
-                "survival": "15",
-                "vault": "19",
-                "caravan": "547h",
-                "monsters": "2,428",
-                "quests": "50",
-                "explores": "2,242"
+                "survival": "20",
+                "vault": "25",
+                "caravan": "242h",
+                "monsters": "3,852",
+                "quests": "91",
+                "explores": "3,594"
             }
         },
         {
