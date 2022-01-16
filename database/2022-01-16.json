@@ -1,0 +1,1337 @@
+{
+    "date": "2022-01-16",
+    "precise_date": "2022-01-16, 07:49",
+    "players": [
+        {
+            "name": "Runa",
+            "attributes": {
+                "lck": 950,
+                "int": 315,
+                "end": 3151,
+                "agi": 281,
+                "str": 2298,
+                "total": 6995
+            },
+            "ext_attributes": {
+                "power": "369,075",
+                "fame": "1,003,781",
+                "rank": "310",
+                "lvl": "39"
+            },
+            "ach_attributes": {
+                "survival": "28",
+                "vault": "31",
+                "caravan": "1,670h",
+                "monsters": "8,488",
+                "quests": "293",
+                "explores": "8,046"
+            }
+        },
+        {
+            "name": "Groktilian",
+            "attributes": {
+                "lck": 775,
+                "int": 769,
+                "end": 3709,
+                "agi": 425,
+                "str": 1834,
+                "total": 7512
+            },
+            "ext_attributes": {
+                "power": "368,998",
+                "fame": "908,002",
+                "rank": "395",
+                "lvl": "37"
+            },
+            "ach_attributes": {
+                "survival": "28",
+                "vault": "38",
+                "caravan": "1,462h",
+                "monsters": "8,275",
+                "quests": "199",
+                "explores": "7,784"
+            }
+        },
+        {
+            "name": "Zepeda",
+            "attributes": {
+                "lck": 763,
+                "int": 3089,
+                "end": 2681,
+                "agi": 553,
+                "str": 477,
+                "total": 7563
+            },
+            "ext_attributes": {
+                "power": "480,584",
+                "fame": "1,006,220",
+                "rank": "305",
+                "lvl": "37"
+            },
+            "ach_attributes": {
+                "survival": "30",
+                "vault": "39",
+                "caravan": "1,935h",
+                "monsters": "9,142",
+                "quests": "125",
+                "explores": "8,648"
+            }
+        },
+        {
+            "name": "Nemke",
+            "attributes": {
+                "lck": 662,
+                "int": 1961,
+                "end": 3805,
+                "agi": 630,
+                "str": 545,
+                "total": 7603
+            },
+            "ext_attributes": {
+                "power": "452,010",
+                "fame": "741,410",
+                "rank": "549",
+                "lvl": "36"
+            },
+            "ach_attributes": {
+                "survival": "29",
+                "vault": "37",
+                "caravan": "518h",
+                "monsters": "7,325",
+                "quests": "411",
+                "explores": "6,891"
+            }
+        },
+        {
+            "name": "dwelduy",
+            "attributes": {
+                "lck": 828,
+                "int": 550,
+                "end": 3430,
+                "agi": 530,
+                "str": 1735,
+                "total": 7073
+            },
+            "ext_attributes": {
+                "power": "355,092",
+                "fame": "736,748",
+                "rank": "554",
+                "lvl": "35"
+            },
+            "ach_attributes": {
+                "survival": "28",
+                "vault": "38",
+                "caravan": "1,546h",
+                "monsters": "6,995",
+                "quests": "267",
+                "explores": "6,595"
+            }
+        },
+        {
+            "name": "JimmyJam",
+            "attributes": {
+                "lck": 565,
+                "int": 350,
+                "end": 2173,
+                "agi": 3108,
+                "str": 350,
+                "total": 6546
+            },
+            "ext_attributes": {
+                "power": "428,809",
+                "fame": "784,174",
+                "rank": "515",
+                "lvl": "35"
+            },
+            "ach_attributes": {
+                "survival": "28",
+                "vault": "30",
+                "caravan": "1,165h",
+                "monsters": "7,732",
+                "quests": "145",
+                "explores": "7,338"
+            }
+        },
+        {
+            "name": "Reddae",
+            "attributes": {
+                "lck": 359,
+                "int": 2275,
+                "end": 2225,
+                "agi": 234,
+                "str": 265,
+                "total": 5358
+            },
+            "ext_attributes": {
+                "power": "351,064",
+                "fame": "683,402",
+                "rank": "606",
+                "lvl": "34"
+            },
+            "ach_attributes": {
+                "survival": "27",
+                "vault": "32",
+                "caravan": "975h",
+                "monsters": "7,159",
+                "quests": "119",
+                "explores": "6,742"
+            }
+        },
+        {
+            "name": "Samu",
+            "attributes": {
+                "lck": 790,
+                "int": 112,
+                "end": 3132,
+                "agi": 113,
+                "str": 1824,
+                "total": 5971
+            },
+            "ext_attributes": {
+                "power": "339,168",
+                "fame": "620,575",
+                "rank": "654",
+                "lvl": "34"
+            },
+            "ach_attributes": {
+                "survival": "26",
+                "vault": "32",
+                "caravan": "1,054h",
+                "monsters": "6,081",
+                "quests": "312",
+                "explores": "5,701"
+            }
+        },
+        {
+            "name": "FreightTrain",
+            "attributes": {
+                "lck": 462,
+                "int": 308,
+                "end": 2313,
+                "agi": 2058,
+                "str": 282,
+                "total": 5423
+            },
+            "ext_attributes": {
+                "power": "305,672",
+                "fame": "547,637",
+                "rank": "719",
+                "lvl": "32"
+            },
+            "ach_attributes": {
+                "survival": "26",
+                "vault": "29",
+                "caravan": "873h",
+                "monsters": "6,148",
+                "quests": "107",
+                "explores": "5,772"
+            }
+        },
+        {
+            "name": "Teemberland",
+            "attributes": {
+                "lck": 475,
+                "int": 451,
+                "end": 2054,
+                "agi": 401,
+                "str": 2046,
+                "total": 5427
+            },
+            "ext_attributes": {
+                "power": "275,158",
+                "fame": "543,684",
+                "rank": "724",
+                "lvl": "32"
+            },
+            "ach_attributes": {
+                "survival": "24",
+                "vault": "29",
+                "caravan": "950h",
+                "monsters": "5,896",
+                "quests": "111",
+                "explores": "5,543"
+            }
+        },
+        {
+            "name": "Hypozonic",
+            "attributes": {
+                "lck": 1624,
+                "int": 682,
+                "end": 2095,
+                "agi": 1228,
+                "str": 728,
+                "total": 6357
+            },
+            "ext_attributes": {
+                "power": "314,755",
+                "fame": "550,907",
+                "rank": "715",
+                "lvl": "32"
+            },
+            "ach_attributes": {
+                "survival": "25",
+                "vault": "33",
+                "caravan": "753h",
+                "monsters": "5,858",
+                "quests": "166",
+                "explores": "5,482"
+            }
+        },
+        {
+            "name": "WOoOP",
+            "attributes": {
+                "lck": 775,
+                "int": 445,
+                "end": 2481,
+                "agi": 621,
+                "str": 1769,
+                "total": 6091
+            },
+            "ext_attributes": {
+                "power": "318,578",
+                "fame": "432,627",
+                "rank": "818",
+                "lvl": "31"
+            },
+            "ach_attributes": {
+                "survival": "26",
+                "vault": "33",
+                "caravan": "874h",
+                "monsters": "4,888",
+                "quests": "138",
+                "explores": "4,551"
+            }
+        },
+        {
+            "name": "Future",
+            "attributes": {
+                "lck": 504,
+                "int": 1027,
+                "end": 1323,
+                "agi": 303,
+                "str": 293,
+                "total": 3450
+            },
+            "ext_attributes": {
+                "power": "138,957",
+                "fame": "311,422",
+                "rank": "986",
+                "lvl": "28"
+            },
+            "ach_attributes": {
+                "survival": "19",
+                "vault": "23",
+                "caravan": "652h",
+                "monsters": "4,065",
+                "quests": "106",
+                "explores": "3,801"
+            }
+        },
+        {
+            "name": "Paranoid Monke",
+            "attributes": {
+                "lck": 852,
+                "int": 413,
+                "end": 1324,
+                "agi": 1582,
+                "str": 413,
+                "total": 4584
+            },
+            "ext_attributes": {
+                "power": "185,799",
+                "fame": "295,048",
+                "rank": "1015",
+                "lvl": "28"
+            },
+            "ach_attributes": {
+                "survival": "21",
+                "vault": "26",
+                "caravan": "669h",
+                "monsters": "3,732",
+                "quests": "246",
+                "explores": "3,449"
+            }
+        },
+        {
+            "name": "Weyfirst",
+            "attributes": {
+                "lck": 404,
+                "int": 237,
+                "end": 1750,
+                "agi": 240,
+                "str": 1810,
+                "total": 4441
+            },
+            "ext_attributes": {
+                "power": "229,468",
+                "fame": "346,581",
+                "rank": "939",
+                "lvl": "28"
+            },
+            "ach_attributes": {
+                "survival": "23",
+                "vault": "28",
+                "caravan": "501h",
+                "monsters": "4,472",
+                "quests": "86",
+                "explores": "4,175"
+            }
+        },
+        {
+            "name": "Jesse",
+            "attributes": {
+                "lck": 166,
+                "int": 972,
+                "end": 909,
+                "agi": 75,
+                "str": 75,
+                "total": 2197
+            },
+            "ext_attributes": {
+                "power": "117,787",
+                "fame": "255,647",
+                "rank": "1098",
+                "lvl": "27"
+            },
+            "ach_attributes": {
+                "survival": "17",
+                "vault": "20",
+                "caravan": "112h",
+                "monsters": "3,839",
+                "quests": "88",
+                "explores": "3,611"
+            }
+        },
+        {
+            "name": "Saruman",
+            "attributes": {
+                "lck": 420,
+                "int": 1908,
+                "end": 1629,
+                "agi": 561,
+                "str": 230,
+                "total": 4748
+            },
+            "ext_attributes": {
+                "power": "264,187",
+                "fame": "439,322",
+                "rank": "809",
+                "lvl": "28"
+            },
+            "ach_attributes": {
+                "survival": "24",
+                "vault": "28",
+                "caravan": "942h",
+                "monsters": "5,221",
+                "quests": "76",
+                "explores": "4,903"
+            }
+        },
+        {
+            "name": "AndyEXOTIC",
+            "attributes": {
+                "lck": 374,
+                "int": 126,
+                "end": 1139,
+                "agi": 207,
+                "str": 1753,
+                "total": 3599
+            },
+            "ext_attributes": {
+                "power": "214,939",
+                "fame": "283,791",
+                "rank": "1039",
+                "lvl": "27"
+            },
+            "ach_attributes": {
+                "survival": "20",
+                "vault": "25",
+                "caravan": "242h",
+                "monsters": "3,975",
+                "quests": "93",
+                "explores": "3,712"
+            }
+        },
+        {
+            "name": "Pelsy",
+            "attributes": {
+                "lck": 226,
+                "int": 42,
+                "end": 484,
+                "agi": 566,
+                "str": 42,
+                "total": 1360
+            },
+            "ext_attributes": {
+                "power": "50,272",
+                "fame": "42,146",
+                "rank": "2500",
+                "lvl": "16"
+            },
+            "ach_attributes": {
+                "survival": "6",
+                "vault": "14",
+                "caravan": "139h",
+                "monsters": "816",
+                "quests": "20",
+                "explores": "734"
+            }
+        }
+    ],
+    "tribes": [
+        {
+            "name": "Glassers",
+            "guild_parameters": {
+                "reactor": "14",
+                "members": "18",
+                "lvl": "14"
+            },
+            "guild_results": {
+                "power": "3,977,732",
+                "fame": "16,452",
+                "rank": "49"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/glassers/"
+        },
+        {
+            "name": "Stalkerz",
+            "guild_parameters": {
+                "reactor": "13",
+                "members": "14",
+                "lvl": "10"
+            },
+            "guild_results": {
+                "power": "2,979,290",
+                "fame": "16,343",
+                "rank": "53"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/stalkerz/"
+        },
+        {
+            "name": "Balance",
+            "guild_parameters": {
+                "reactor": "9",
+                "members": "16",
+                "lvl": "12"
+            },
+            "guild_results": {
+                "power": "2,270,883",
+                "fame": "14,918",
+                "rank": "58"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/balance/"
+        },
+        {
+            "name": "AxisChurch",
+            "guild_parameters": {
+                "reactor": "13",
+                "members": "14",
+                "lvl": "10"
+            },
+            "guild_results": {
+                "power": "2,237,508",
+                "fame": "16,583",
+                "rank": "47"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/axischurch/"
+        },
+        {
+            "name": "Flawless Rising",
+            "guild_parameters": {
+                "reactor": "9",
+                "members": "14",
+                "lvl": "11"
+            },
+            "guild_results": {
+                "power": "2,010,714",
+                "fame": "14,628",
+                "rank": "61"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/arroyo/"
+        },
+        {
+            "name": "Idle Fix",
+            "guild_parameters": {
+                "reactor": "12",
+                "members": "17",
+                "lvl": "13"
+            },
+            "guild_results": {
+                "power": "2,804,887",
+                "fame": "14,912",
+                "rank": "58"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/idle-fix/"
+        },
+        {
+            "name": "power trip",
+            "guild_parameters": {
+                "reactor": "11",
+                "members": "16",
+                "lvl": "12"
+            },
+            "guild_results": {
+                "power": "1,815,200",
+                "fame": "14,263",
+                "rank": "62"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/power-trip/"
+        },
+        {
+            "name": "Hyperia",
+            "guild_parameters": {
+                "reactor": "11",
+                "members": "12",
+                "lvl": "11"
+            },
+            "guild_results": {
+                "power": "1,772,074",
+                "fame": "15,548",
+                "rank": "57"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/hyperia/"
+        },
+        {
+            "name": "Spirituality",
+            "guild_parameters": {
+                "reactor": "13",
+                "members": "15",
+                "lvl": "12"
+            },
+            "guild_results": {
+                "power": "3,239,258",
+                "fame": "16,392",
+                "rank": "52"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/spirituality/"
+        },
+        {
+            "name": "The Sphere",
+            "guild_parameters": {
+                "reactor": "12",
+                "members": "15",
+                "lvl": "11"
+            },
+            "guild_results": {
+                "power": "2,213,929",
+                "fame": "16,243",
+                "rank": "55"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/the-sphere/"
+        },
+        {
+            "name": "Exiled",
+            "guild_parameters": {
+                "reactor": "12",
+                "members": "16",
+                "lvl": "12"
+            },
+            "guild_results": {
+                "power": "2,544,543",
+                "fame": "16,281",
+                "rank": "54"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/exiled/"
+        },
+        {
+            "name": "Luscea",
+            "guild_parameters": {
+                "reactor": "12",
+                "members": "15",
+                "lvl": "11"
+            },
+            "guild_results": {
+                "power": "3,106,825",
+                "fame": "16,456",
+                "rank": "49"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/luscea/"
+        },
+        {
+            "name": "LATAM_Raiders",
+            "guild_parameters": {
+                "reactor": "13",
+                "members": "15",
+                "lvl": "12"
+            },
+            "guild_results": {
+                "power": "2,593,137",
+                "fame": "15,623",
+                "rank": "56"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/latam_raiders/"
+        },
+        {
+            "name": "Havoc",
+            "guild_parameters": {
+                "reactor": "20",
+                "members": "16",
+                "lvl": "12"
+            },
+            "guild_results": {
+                "power": "6,134,646",
+                "fame": "19,339",
+                "rank": "29"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/havoc/"
+        },
+        {
+            "name": "FarmRPG",
+            "guild_parameters": {
+                "reactor": "15",
+                "members": "17",
+                "lvl": "13"
+            },
+            "guild_results": {
+                "power": "3,766,460",
+                "fame": "16,772",
+                "rank": "46"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/farmrpg/"
+        },
+        {
+            "name": "Elysium",
+            "guild_parameters": {
+                "reactor": "17",
+                "members": "18",
+                "lvl": "14"
+            },
+            "guild_results": {
+                "power": "4,830,318",
+                "fame": "18,559",
+                "rank": "40"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/elysium/"
+        },
+        {
+            "name": "StormBlood",
+            "guild_parameters": {
+                "reactor": "18",
+                "members": "19",
+                "lvl": "15"
+            },
+            "guild_results": {
+                "power": "5,478,226",
+                "fame": "18,915",
+                "rank": "32"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/stormblood/"
+        },
+        {
+            "name": "Quest",
+            "guild_parameters": {
+                "reactor": "13",
+                "members": "15",
+                "lvl": "12"
+            },
+            "guild_results": {
+                "power": "3,208,883",
+                "fame": "16,448",
+                "rank": "50"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/quest/"
+        },
+        {
+            "name": "\u0418\u043d\u0444\u0435\u043a\u0442\u0435\u0434 \u041c\u0430\u0448\u0440\u0443\u043c",
+            "guild_parameters": {
+                "reactor": "22",
+                "members": "19",
+                "lvl": "15"
+            },
+            "guild_results": {
+                "power": "4,896,847",
+                "fame": "18,622",
+                "rank": "39"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/guild-5/"
+        },
+        {
+            "name": "Raiders",
+            "guild_parameters": {
+                "reactor": "17",
+                "members": "19",
+                "lvl": "15"
+            },
+            "guild_results": {
+                "power": "5,494,645",
+                "fame": "18,742",
+                "rank": "35"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/raiders/"
+        },
+        {
+            "name": "Nightmare Rats",
+            "guild_parameters": {
+                "reactor": "18",
+                "members": "19",
+                "lvl": "15"
+            },
+            "guild_results": {
+                "power": "4,899,608",
+                "fame": "18,768",
+                "rank": "33"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/nightmare-rats/"
+        },
+        {
+            "name": "The Light",
+            "guild_parameters": {
+                "reactor": "18",
+                "members": "19",
+                "lvl": "15"
+            },
+            "guild_results": {
+                "power": "5,935,134",
+                "fame": "19,185",
+                "rank": "30"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/the-light/"
+        },
+        {
+            "name": "Fenrir",
+            "guild_parameters": {
+                "reactor": "17",
+                "members": "15",
+                "lvl": "14"
+            },
+            "guild_results": {
+                "power": "5,242,112",
+                "fame": "18,759",
+                "rank": "34"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/fenrir/"
+        },
+        {
+            "name": "REALIZE",
+            "guild_parameters": {
+                "reactor": "16",
+                "members": "17",
+                "lvl": "14"
+            },
+            "guild_results": {
+                "power": "4,505,119",
+                "fame": "18,231",
+                "rank": "42"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/bloodhounds/"
+        },
+        {
+            "name": "Old guard",
+            "guild_parameters": {
+                "reactor": "16",
+                "members": "18",
+                "lvl": "14"
+            },
+            "guild_results": {
+                "power": "2,525,364",
+                "fame": "16,520",
+                "rank": "48"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/old-guard/"
+        },
+        {
+            "name": "Real sociedade",
+            "guild_parameters": {
+                "reactor": "17",
+                "members": "16",
+                "lvl": "13"
+            },
+            "guild_results": {
+                "power": "4,138,423",
+                "fame": "18,652",
+                "rank": "38"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/real-sociedade/"
+        },
+        {
+            "name": "BumpMap",
+            "guild_parameters": {
+                "reactor": "19",
+                "members": "18",
+                "lvl": "14"
+            },
+            "guild_results": {
+                "power": "5,642,610",
+                "fame": "19,072",
+                "rank": "31"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/bumpmap/"
+        },
+        {
+            "name": "DarkWarriors",
+            "guild_parameters": {
+                "reactor": "20",
+                "members": "19",
+                "lvl": "15"
+            },
+            "guild_results": {
+                "power": "6,274,403",
+                "fame": "19,439",
+                "rank": "28"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/darkwarriors/"
+        },
+        {
+            "name": "Destroyers",
+            "guild_parameters": {
+                "reactor": "18",
+                "members": "14",
+                "lvl": "14"
+            },
+            "guild_results": {
+                "power": "1,854,612",
+                "fame": "16,780",
+                "rank": "45"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/destroyers/"
+        },
+        {
+            "name": "Chayka",
+            "guild_parameters": {
+                "reactor": "22",
+                "members": "18",
+                "lvl": "15"
+            },
+            "guild_results": {
+                "power": "7,104,674",
+                "fame": "19,534",
+                "rank": "26"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/chayka/"
+        },
+        {
+            "name": "SK/CZ Legion",
+            "guild_parameters": {
+                "reactor": "20",
+                "members": "20",
+                "lvl": "16"
+            },
+            "guild_results": {
+                "power": "7,684,902",
+                "fame": "20,065",
+                "rank": "22"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/skcz-legion/"
+        },
+        {
+            "name": "Foamy Scamps",
+            "guild_parameters": {
+                "reactor": "22",
+                "members": "20",
+                "lvl": "16"
+            },
+            "guild_results": {
+                "power": "6,964,856",
+                "fame": "19,622",
+                "rank": "25"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/foamy-scamps/"
+        },
+        {
+            "name": "Mercs",
+            "guild_parameters": {
+                "reactor": "18",
+                "members": "18",
+                "lvl": "14"
+            },
+            "guild_results": {
+                "power": "4,600,668",
+                "fame": "18,793",
+                "rank": "35"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/mercs/"
+        },
+        {
+            "name": "MONOLIT",
+            "guild_parameters": {
+                "reactor": "18",
+                "members": "16",
+                "lvl": "13"
+            },
+            "guild_results": {
+                "power": "5,042,341",
+                "fame": "18,724",
+                "rank": "37"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/monolit/"
+        },
+        {
+            "name": "Russians coming",
+            "guild_parameters": {
+                "reactor": "21",
+                "members": "19",
+                "lvl": "15"
+            },
+            "guild_results": {
+                "power": "6,886,905",
+                "fame": "19,601",
+                "rank": "25"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/russians-coming/"
+        },
+        {
+            "name": "Desert Rangers",
+            "guild_parameters": {
+                "reactor": "19",
+                "members": "17",
+                "lvl": "13"
+            },
+            "guild_results": {
+                "power": "5,668,139",
+                "fame": "19,516",
+                "rank": "27"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/desert-rangers/"
+        },
+        {
+            "name": "Star Children",
+            "guild_parameters": {
+                "reactor": "21",
+                "members": "20",
+                "lvl": "16"
+            },
+            "guild_results": {
+                "power": "6,745,991",
+                "fame": "19,761",
+                "rank": "23"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/star-children/"
+        },
+        {
+            "name": "Legion",
+            "guild_parameters": {
+                "reactor": "17",
+                "members": "18",
+                "lvl": "15"
+            },
+            "guild_results": {
+                "power": "4,902,850",
+                "fame": "18,194",
+                "rank": "42"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/legion/"
+        },
+        {
+            "name": "Charlie Squad",
+            "guild_parameters": {
+                "reactor": "17",
+                "members": "17",
+                "lvl": "14"
+            },
+            "guild_results": {
+                "power": "4,078,864",
+                "fame": "18,542",
+                "rank": "41"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/charlie-squad/"
+        },
+        {
+            "name": "German Elite",
+            "guild_parameters": {
+                "reactor": "17",
+                "members": "20",
+                "lvl": "16"
+            },
+            "guild_results": {
+                "power": "4,148,089",
+                "fame": "17,907",
+                "rank": "44"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/german-elite/"
+        },
+        {
+            "name": "Haventus",
+            "guild_parameters": {
+                "reactor": "23",
+                "members": "20",
+                "lvl": "16"
+            },
+            "guild_results": {
+                "power": "9,227,821",
+                "fame": "22,935",
+                "rank": "14"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/haventus/"
+        },
+        {
+            "name": "\u62d6\u62c9\u673a",
+            "guild_parameters": {
+                "reactor": "22",
+                "members": "20",
+                "lvl": "16"
+            },
+            "guild_results": {
+                "power": "8,362,672",
+                "fame": "22,476",
+                "rank": "16"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/guild-3/"
+        },
+        {
+            "name": "Eclipse Academy",
+            "guild_parameters": {
+                "reactor": "21",
+                "members": "20",
+                "lvl": "16"
+            },
+            "guild_results": {
+                "power": "8,433,837",
+                "fame": "20,882",
+                "rank": "21"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/eclipse-academy/"
+        },
+        {
+            "name": "Old Gamers",
+            "guild_parameters": {
+                "reactor": "22",
+                "members": "20",
+                "lvl": "16"
+            },
+            "guild_results": {
+                "power": "8,519,017",
+                "fame": "22,010",
+                "rank": "18"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/old-gamers/"
+        },
+        {
+            "name": "Free2Play",
+            "guild_parameters": {
+                "reactor": "23",
+                "members": "18",
+                "lvl": "16"
+            },
+            "guild_results": {
+                "power": "6,733,066",
+                "fame": "21,586",
+                "rank": "20"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/free2play/"
+        },
+        {
+            "name": "Winged Hussars",
+            "guild_parameters": {
+                "reactor": "24",
+                "members": "20",
+                "lvl": "16"
+            },
+            "guild_results": {
+                "power": "9,913,000",
+                "fame": "23,470",
+                "rank": "12"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/winged-hussars/"
+        },
+        {
+            "name": "Inferno",
+            "guild_parameters": {
+                "reactor": "22",
+                "members": "19",
+                "lvl": "15"
+            },
+            "guild_results": {
+                "power": "8,068,350",
+                "fame": "22,490",
+                "rank": "15"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/inferno/"
+        },
+        {
+            "name": "GROM",
+            "guild_parameters": {
+                "reactor": "22",
+                "members": "20",
+                "lvl": "17"
+            },
+            "guild_results": {
+                "power": "6,819,839",
+                "fame": "22,047",
+                "rank": "17"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/grom/"
+        },
+        {
+            "name": "TOP",
+            "guild_parameters": {
+                "reactor": "25",
+                "members": "20",
+                "lvl": "16"
+            },
+            "guild_results": {
+                "power": "10,152,440",
+                "fame": "23,616",
+                "rank": "11"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/top/"
+        },
+        {
+            "name": "ELIT",
+            "guild_parameters": {
+                "reactor": "22",
+                "members": "14",
+                "lvl": "16"
+            },
+            "guild_results": {
+                "power": "5,066,764",
+                "fame": "21,984",
+                "rank": "19"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/elit/"
+        },
+        {
+            "name": "\u5929\u738b\u5e2e",
+            "guild_parameters": {
+                "reactor": "24",
+                "members": "20",
+                "lvl": "17"
+            },
+            "guild_results": {
+                "power": "10,227,792",
+                "fame": "23,378",
+                "rank": "13"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/guild/"
+        },
+        {
+            "name": "\u70fd\u706b\u6881\u5c71",
+            "guild_parameters": {
+                "reactor": "24",
+                "members": "20",
+                "lvl": "17"
+            },
+            "guild_results": {
+                "power": "9,055,313",
+                "fame": "23,661",
+                "rank": "10"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/guild-2/"
+        },
+        {
+            "name": "Team Squad",
+            "guild_parameters": {
+                "reactor": "28",
+                "members": "18",
+                "lvl": "17"
+            },
+            "guild_results": {
+                "power": "11,011,971",
+                "fame": "24,570",
+                "rank": "8"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/team-squad/"
+        },
+        {
+            "name": "The Tavern",
+            "guild_parameters": {
+                "reactor": "29",
+                "members": "20",
+                "lvl": "19"
+            },
+            "guild_results": {
+                "power": "11,946,066",
+                "fame": "25,683",
+                "rank": "6"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/the-tavern/"
+        },
+        {
+            "name": "Bravo Squad",
+            "guild_parameters": {
+                "reactor": "27",
+                "members": "20",
+                "lvl": "19"
+            },
+            "guild_results": {
+                "power": "11,280,058",
+                "fame": "24,509",
+                "rank": "9"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/bravo-squad/"
+        },
+        {
+            "name": "Dakar",
+            "guild_parameters": {
+                "reactor": "29",
+                "members": "20",
+                "lvl": "19"
+            },
+            "guild_results": {
+                "power": "12,033,726",
+                "fame": "24,892",
+                "rank": "7"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/dakar/"
+        },
+        {
+            "name": "The Lotus",
+            "guild_parameters": {
+                "reactor": "29",
+                "members": "20",
+                "lvl": "19"
+            },
+            "guild_results": {
+                "power": "12,289,710",
+                "fame": "27,878",
+                "rank": "5"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/the-lotus/"
+        },
+        {
+            "name": "Clarity",
+            "guild_parameters": {
+                "reactor": "31",
+                "members": "20",
+                "lvl": "20"
+            },
+            "guild_results": {
+                "power": "14,554,784",
+                "fame": "28,940",
+                "rank": "3"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/clarity/"
+        },
+        {
+            "name": "Flawless",
+            "guild_parameters": {
+                "reactor": "31",
+                "members": "19",
+                "lvl": "21"
+            },
+            "guild_results": {
+                "power": "13,113,867",
+                "fame": "28,304",
+                "rank": "4"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/flawless/"
+        },
+        {
+            "name": "Eclipse",
+            "guild_parameters": {
+                "reactor": "31",
+                "members": "20",
+                "lvl": "21"
+            },
+            "guild_results": {
+                "power": "13,648,411",
+                "fame": "29,028",
+                "rank": "2"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/eclipse/"
+        },
+        {
+            "name": "Alpha Squad",
+            "guild_parameters": {
+                "reactor": "34",
+                "members": "20",
+                "lvl": "21"
+            },
+            "guild_results": {
+                "power": "16,488,156",
+                "fame": "40,918",
+                "rank": "1"
+            },
+            "endpoint": "https://api.lost-vault.com/tribes/alpha-squad/"
+        }
+    ]
+}
