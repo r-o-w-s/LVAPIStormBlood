@@ -16,7 +16,7 @@ final_result["precise_date"] = date.today().strftime("%Y-%m-%d, %H:%M")
 
 # Players Part
 
-nicknames = ["runa", "groktilian", "zepeda", "nemke", "dwelduy", "reddae", "samu", "freighttrain", "teemberland", "hypozonic", "wooop", "future", "paranoid-monke", "weyfirst", "jesse", "drake-reinz", "endurance", "pelsy"]
+nicknames = ["runa", "groktilian", "zepeda", "nemke", "dwelduy", "jimmyjam", "reddae", "samu", "freighttrain", "teemberland", "hypozonic", "wooop", "future", "paranoid-monke", "weyfirst", "jesse", "saruman", "andyexotic", "pelsy"]
 
 raw_htmls = [requests.get(f"https://api.lost-vault.com/players/{nickname}/") for nickname in nicknames]
 
@@ -62,8 +62,8 @@ for html in raw_htmls:
 
 # Tribes part
 
-guild_names = ["glassers", "turkish-army", "stalkerz", "parlament", "axischurch", "arroyo", "idle-fix", "power-trip", "hyperia", "spirituality", "the-sphere",
- "exiled", "luscea", "guild-7", "latam_raiders", "havoc", "farmrpg", "elysium", "stormblood", "brewers-guild",
+guild_names = ["glassers", "stalkerz", "balance", "axischurch", "arroyo", "idle-fix", "power-trip", "hyperia", "spirituality", "the-sphere",
+ "exiled", "luscea", "latam_raiders", "havoc", "farmrpg", "elysium", "stormblood", "quest",
  "guild-5", "raiders", "nightmare-rats", "the-light", "fenrir", "bloodhounds", "old-guard", "real-sociedade", "bumpmap",
  "darkwarriors", "destroyers", "chayka", "skcz-legion", "foamy-scamps", "mercs", "monolit", "russians-coming",
  "desert-rangers", "star-children", "legion", "charlie-squad", "german-elite", "haventus", "guild-3", "eclipse-academy",

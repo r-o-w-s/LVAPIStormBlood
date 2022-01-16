@@ -54,197 +54,165 @@ $(function() {
     var people = [];
 
     const loadTodayPromise = new Promise((resolve, reject) => {     
-      $.getJSON(`database/${today}.json`, function(data) {
-        $(`<span>${data.precise_date}</span>`).appendTo("#dateTracker");
-        $.each(data.players, function(g, h) {
-          var attrRow = "<tr>" +
-            "<td class='font-black'>" + h.name+ "</td>" +
-            `<td id="attr_str_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.attributes.total}>` + h.attributes.total + "</td>" +
-            `<td id="ext_attr_lvl_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.ext_attributes.lvl}>` + h.ext_attributes.lvl + "</td>" +
-            `<td id="ext_attr_rank_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.ext_attributes.rank}>` + h.ext_attributes.rank + "</td>" +
-            `<td id="ext_attr_power_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.ext_attributes.power}>` + h.ext_attributes.power + "</td>" +
-            `<td id="ach_attr_explores_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.ach_attributes.explores}>` + h.ach_attributes.explores + "</td>" +
-            `<td id="ach_attr_quests_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.ach_attributes.quests}>` + h.ach_attributes.quests + "</td>" +
-            `<td id="ach_attr_monsters_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.ach_attributes.monsters}>` + h.ach_attributes.monsters + "</td>" +
-            `<td id="ach_attr_caravan_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.ach_attributes.caravan.replace("h", "")}>` + h.ach_attributes.caravan + "</td>" +
-            `<td id="ach_attr_vault_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.ach_attributes.vault}>` + h.ach_attributes.vault + "</td>" +
-            `<td id="ach_attr_survival_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.ach_attributes.survival}>` + h.ach_attributes.survival + "</td>" +
+		$.getJSON(`database/${today}.json`, function(data) {
+			$(`<span>${data.precise_date}</span>`).appendTo("#dateTracker");
+			$.each(data.players, function(g, h) {
+			var attrRow = "<tr>" +
+				"<td class='font-black'>" + h.name+ "</td>" +
+				`<td id="attr_total_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.attributes.total}>` + h.attributes.total + "</td>" +
+				`<td id="ext_attr_lvl_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.ext_attributes.lvl}>` + h.ext_attributes.lvl + "</td>" +
+				`<td id="ext_attr_rank_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.ext_attributes.rank}>` + h.ext_attributes.rank + "</td>" +
+				`<td id="ext_attr_power_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.ext_attributes.power}>` + h.ext_attributes.power + "</td>" +
+				`<td id="ach_attr_explores_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.ach_attributes.explores}>` + h.ach_attributes.explores + "</td>" +
+				`<td id="ach_attr_quests_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.ach_attributes.quests}>` + h.ach_attributes.quests + "</td>" +
+				`<td id="ach_attr_monsters_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.ach_attributes.monsters}>` + h.ach_attributes.monsters + "</td>" +
+				`<td id="ach_attr_caravan_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.ach_attributes.caravan.replace("h", "")}>` + h.ach_attributes.caravan + "</td>" +
+				`<td id="ach_attr_vault_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.ach_attributes.vault}>` + h.ach_attributes.vault + "</td>" +
+				`<td id="ach_attr_survival_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}" data-order=${h.ach_attributes.survival}>` + h.ach_attributes.survival + "</td>" +
             "</tr>"
-          $(attrRow).appendTo("#player_attributes tbody");
-        });
+			$(attrRow).appendTo("#player_attributes tbody");
+			});
 
-        $.each(data.tribes, function(g, h) {
-          var tribeRow = `<tr class='${(h.name == "StormBlood") ? 'text-green-500' : ''}'>` +
-            `<td class='font-black flex'>` + h.name + `<a href="${h.endpoint}" target="_blank"><img src="link-16.ico"/></a>` + "</td>" +
-            `<td id="tribe_members_${h.name.replace(/\d+/g, '').replace(/\s/g, '').replaceAll("/","")}" data-order=${h.guild_parameters.members}>` + h.guild_parameters.members + "</td>" +
-            `<td id="tribe_lvl_${h.name.replace(/\d+/g, '').replace(/\s/g, '').replaceAll("/","")}" data-order=${h.guild_parameters.lvl}>` + h.guild_parameters.lvl + "</td>" +
-            `<td id="tribe_reactor_${h.name.replace(/\d+/g, '').replace(/\s/g, '').replaceAll("/","")}" data-order=${h.guild_parameters.reactor}>` + h.guild_parameters.reactor + "</td>" +
-            `<td id="tribe_rank_${h.name.replace(/\d+/g, '').replace(/\s/g, '').replaceAll("/","")}" data-order=${h.guild_results.rank}>` + h.guild_results.rank + "</td>" +
-            `<td id="tribe_fame_${h.name.replace(/\d+/g, '').replace(/\s/g, '').replaceAll("/","")}" data-order=${h.guild_results.fame}>` + h.guild_results.fame + "</td>" +
-            `<td id="tribe_power_${h.name.replace(/\d+/g, '').replace(/\s/g, '').replaceAll("/","")}" data-order=${h.guild_results.power}>` + h.guild_results.power + "</td>" +
+			$.each(data.tribes, function(g, h) {
+			var tribeRow = `<tr class='${(h.name == "StormBlood") ? 'text-green-500' : ''}'>` +
+				`<td class='font-black flex'>` + h.name + `<a href="${h.endpoint}" target="_blank"><img src="link-16.ico"/></a>` + "</td>" +
+				`<td id="tribe_members_${h.name.replace(/\d+/g, '').replace(/\s/g, '').replaceAll("/","")}" data-order=${h.guild_parameters.members}>` + h.guild_parameters.members + "</td>" +
+				`<td id="tribe_lvl_${h.name.replace(/\d+/g, '').replace(/\s/g, '').replaceAll("/","")}" data-order=${h.guild_parameters.lvl}>` + h.guild_parameters.lvl + "</td>" +
+				`<td id="tribe_reactor_${h.name.replace(/\d+/g, '').replace(/\s/g, '').replaceAll("/","")}" data-order=${h.guild_parameters.reactor}>` + h.guild_parameters.reactor + "</td>" +
+				`<td id="tribe_rank_${h.name.replace(/\d+/g, '').replace(/\s/g, '').replaceAll("/","")}" data-order=${h.guild_results.rank}>` + h.guild_results.rank + "</td>" +
+				`<td id="tribe_fame_${h.name.replace(/\d+/g, '').replace(/\s/g, '').replaceAll("/","")}" data-order=${h.guild_results.fame}>` + h.guild_results.fame + "</td>" +
+				`<td id="tribe_power_${h.name.replace(/\d+/g, '').replace(/\s/g, '').replaceAll("/","")}" data-order=${h.guild_results.power}>` + h.guild_results.power + "</td>" +
             "</tr>"
-          $(tribeRow).appendTo("#tribes tbody");
-        });
-      });
-      resolve(true)
+			$(tribeRow).appendTo("#tribes tbody");
+			});
+		});
+		resolve(true)
     })
 
-    loadTodayPromise.then(() => {
-      $.getJSON(`database/${yesterday}.json`, function(data) {
-        $.each(data.players, function(g, h) {
-          str_td = $(`td#attr_str_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}`)
-          if (parseInt(str_td.text().replace(",", "")) > parseInt(h.attributes.str.replace(",", ""))) {
-            str_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(str_td.text().replace(",", "")) - parseInt(h.attributes.str.replace(",", ""))}</span>`)
-          } else if (parseInt(str_td.text().replace(",", "")) < parseInt(h.attributes.str.replace(",", ""))) {
-            str_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(str_td.text().replace(",", "")) - parseInt(h.attributes.str.replace(",", ""))}</span>`)
-          }
-
-          agi_td = $(`td#attr_agi_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}`)
-          if (parseInt(agi_td.text().replace(",", "")) > parseInt(h.attributes.agi.replace(",", ""))) {
-            agi_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(agi_td.text().replace(",", "")) - parseInt(h.attributes.agi.replace(",", ""))}</span>`)
-          } else if (parseInt(agi_td.text().replace(",", "")) < parseInt(h.attributes.agi.replace(",", ""))) {
-            agi_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(agi_td.text().replace(",", "")) - parseInt(h.attributes.agi.replace(",", ""))}</span>`)
-          }
-
-          end_td = $(`td#attr_end_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}`)
-          if (parseInt(end_td.text().replace(",", "")) > parseInt(h.attributes.end.replace(",", ""))) {
-            end_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(end_td.text().replace(",", "")) - parseInt(h.attributes.end.replace(",", ""))}</span>`)
-          } else if (parseInt(end_td.text().replace(",", "")) < parseInt(h.attributes.end.replace(",", ""))) {
-            end_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(end_td.text().replace(",", "")) - parseInt(h.attributes.end.replace(",", ""))}</span>`)
-          }
-
-          int_td = $(`td#attr_int_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}`)
-          if (parseInt(int_td.text().replace(",", "")) > parseInt(h.attributes.int.replace(",", ""))) {
-            int_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(int_td.text().replace(",", "")) - parseInt(h.attributes.int.replace(",", ""))}</span>`)
-          } else if (parseInt(int_td.text().replace(",", "")) < parseInt(h.attributes.int.replace(",", ""))) {
-            int_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(int_td.text().replace(",", "")) - parseInt(h.attributes.int.replace(",", ""))}</span>`)
-          }
-
-          lck_td = $(`td#attr_lck_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}`)
-          if (parseInt(lck_td.text().replace(",", "")) > parseInt(h.attributes.lck.replace(",", ""))) {
-            lck_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(lck_td.text().replace(",", "")) - parseInt(h.attributes.lck.replace(",", ""))}</span>`)
-          } else if (parseInt(lck_td.text().replace(",", "")) < parseInt(h.attributes.lck.replace(",", ""))) {
-            lck_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(lck_td.text().replace(",", "")) - parseInt(h.attributes.lck.replace(",", ""))}</span>`)
-          }
+	loadTodayPromise.then(() => {
+		$.getJSON(`database/${yesterday}.json`, function(data) {
+			$.each(data.players, function(g, h) {
+				total_td = $(`td#attr_total_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}`)
+				if (parseInt(total_td.text()) > h.attributes.total) {
+					total_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(total_td.text()) - h.attributes.total}</span>`)
+				} else if (parseInt(total_td.text()) < h.attributes.total){
+					total_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(total_td.text()) - h.attributes.total}</span>`)
+				}
 
 
-          lvl_td = $(`td#ext_attr_lvl_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}`)
-          if (parseInt(lvl_td.text().replace(",", "")) > parseInt(h.ext_attributes.lvl.replace(",", ""))) {
-            lvl_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(lvl_td.text().replace(",", "")) - parseInt(h.ext_attributes.lvl.replace(",", ""))}</span>`)
-          } else if (parseInt(lvl_td.text().replace(",", "")) < parseInt(h.ext_attributes.lvl.replace(",", ""))) {
-            lvl_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(lvl_td.text().replace(",", "")) - parseInt(h.ext_attributes.lvl.replace(",", ""))}</span>`)
-          }
-
-          rank_td = $(`td#ext_attr_rank_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}`)
-          if (parseInt(rank_td.text().replace(",", "")) < parseInt(h.ext_attributes.rank.replace(",", ""))) {
-            rank_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(rank_td.text().replace(",", "")) - parseInt(h.ext_attributes.rank.replace(",", ""))}</span>`)
-          } else if (parseInt(rank_td.text().replace(",", "")) > parseInt(h.ext_attributes.rank.replace(",", ""))) {
-            rank_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(rank_td.text().replace(",", "")) - parseInt(h.ext_attributes.rank.replace(",", ""))}</span>`)
-          }
-
-          fame_td = $(`td#ext_attr_fame_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}`)
-          if (parseInt(fame_td.text().replace(",", "")) > parseInt(h.ext_attributes.fame.replace(",", ""))) {
-            fame_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(fame_td.text().replace(",", "")) - parseInt(h.ext_attributes.fame.replace(",", ""))}</span>`)
-          } else if (parseInt(fame_td.text().replace(",", "")) < parseInt(h.ext_attributes.fame.replace(",", ""))) {
-            fame_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(fame_td.text().replace(",", "")) - parseInt(h.ext_attributes.fame.replace(",", ""))}</span>`)
-          }
-
-          power_td = $(`td#ext_attr_power_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}`)
-          if (parseInt(power_td.text().replace(",", "")) > parseInt(h.ext_attributes.power.replace(",", ""))) {
-            power_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(power_td.text().replace(",", "")) - parseInt(h.ext_attributes.power.replace(",", ""))}</span>`)
-          } else if (parseInt(power_td.text().replace(",", "")) < parseInt(h.ext_attributes.power.replace(",", ""))) {
-            power_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(power_td.text().replace(",", "")) - parseInt(h.ext_attributes.power.replace(",", ""))}</span>`)
-          }
+				lvl_td = $(`td#ext_attr_lvl_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}`)
+				if (parseInt(lvl_td.text().replace(",", "")) > parseInt(h.ext_attributes.lvl.replace(",", ""))) {
+					lvl_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(lvl_td.text().replace(",", "")) - parseInt(h.ext_attributes.lvl.replace(",", ""))}</span>`)
+				} else if (parseInt(lvl_td.text().replace(",", "")) < parseInt(h.ext_attributes.lvl.replace(",", ""))){
+					lvl_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(lvl_td.text().replace(",", "")) - parseInt(h.ext_attributes.lvl.replace(",", ""))}</span>`)
+				}
 
 
-          explores_td = $(`td#ach_attr_explores_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}`)
-          if (parseInt(explores_td.text().replace(",", "")) > parseInt(h.ach_attributes.explores.replace(",", ""))) {
-            explores_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(explores_td.text().replace(",", "")) - parseInt(h.ach_attributes.explores.replace(",", ""))}</span>`)
-          } else if (parseInt(explores_td.text().replace(",", "")) < parseInt(h.ach_attributes.explores.replace(",", ""))) {
-            explores_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(explores_td.text().replace(",", "")) - parseInt(h.ach_attributes.explores.replace(",", ""))}</span>`)
-          }
+				rank_td = $(`td#ext_attr_rank_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}`)
+				if (parseInt(rank_td.text().replace(",", "")) < parseInt(h.ext_attributes.rank.replace(",", ""))) {
+					rank_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(rank_td.text().replace(",", "")) - parseInt(h.ext_attributes.rank.replace(",", ""))}</span>`)
+				} else if (parseInt(rank_td.text().replace(",", "")) > parseInt(h.ext_attributes.rank.replace(",", ""))){
+					rank_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(rank_td.text().replace(",", "")) - parseInt(h.ext_attributes.rank.replace(",", ""))}</span>`)
+				}
 
-          quests_td = $(`td#ach_attr_quests_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}`)
-          if (parseInt(quests_td.text().replace(",", "")) > parseInt(h.ach_attributes.quests.replace(",", ""))) {
-            quests_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(quests_td.text().replace(",", "")) - parseInt(h.ach_attributes.quests.replace(",", ""))}</span>`)
-          } else if (parseInt(quests_td.text().replace(",", "")) < parseInt(h.ach_attributes.quests.replace(",", ""))) {
-           quests_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(quests_td.text().replace(",", "")) - parseInt(h.ach_attributes.quests.replace(",", ""))}</span>`)
-          }
 
-          monsters_td = $(`td#ach_attr_monsters_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}`)
-          if (parseInt(monsters_td.text().replace(",", "")) > parseInt(h.ach_attributes.monsters.replace(",", ""))) {
-            monsters_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(monsters_td.text().replace(",", "")) - parseInt(h.ach_attributes.monsters.replace(",", ""))}</span>`)
-          } else if (parseInt(monsters_td.text().replace(",", "")) < parseInt(h.ach_attributes.monsters.replace(",", ""))) {
-            monsters_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(monsters_td.text().replace(",", "")) - parseInt(h.ach_attributes.monsters.replace(",", ""))}</span>`)
-          }
+				power_td = $(`td#ext_attr_power_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}`)
+				if (parseInt(power_td.text().replace(",", "")) > parseInt(h.ext_attributes.power.replace(",", ""))) {
+					power_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(power_td.text().replace(",", "")) - parseInt(h.ext_attributes.power.replace(",", ""))}</span>`)
+				} else if (parseInt(power_td.text().replace(",", "")) < parseInt(h.ext_attributes.power.replace(",", ""))){
+					power_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(power_td.text().replace(",", "")) - parseInt(h.ext_attributes.power.replace(",", ""))}</span>`)
+				}
 
-          caravan_td = $(`td#ach_attr_caravan_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}`)
-          if (parseInt(caravan_td.text()) > parseInt(h.ach_attributes.caravan)) {
-            caravan_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(caravan_td.text()) - parseInt(h.ach_attributes.caravan)}</span>`)
-          } else if (parseInt(caravan_td.text()) < parseInt(h.ach_attributes.caravan)) {
-            caravan_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(caravan_td.text()) - parseInt(h.ach_attributes.caravan)}</span>`)
-          }
 
-          vault_td = $(`td#ach_attr_vault_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}`)
-          if (parseInt(vault_td.text().replace(",", "")) > parseInt(h.ach_attributes.vault.replace(",", ""))) {
-            vault_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(vault_td.text().replace(",", "")) - parseInt(h.ach_attributes.vault.replace(",", ""))}</span>`)
-          } else if (parseInt(vault_td.text().replace(",", "")) < parseInt(h.ach_attributes.vault.replace(",", ""))) {
-            vault_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(vault_td.text().replace(",", "")) - parseInt(h.ach_attributes.vault.replace(",", ""))}</span>`)
-          }
+				explores_td = $(`td#ach_attr_explores_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}`)
+				if (parseInt(explores_td.text().replace(",", "")) > parseInt(h.ach_attributes.explores.replace(",", ""))) {
+					explores_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(explores_td.text().replace(",", "")) - parseInt(h.ach_attributes.explores.replace(",", ""))}</span>`)
+				} else if (parseInt(explores_td.text().replace(",", "")) < parseInt(h.ach_attributes.explores.replace(",", ""))){
+					explores_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(explores_td.text().replace(",", "")) - parseInt(h.ach_attributes.explores.replace(",", ""))}</span>`)
+				}
 
-          survival_td = $(`td#ach_attr_survival_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}`)
-          if (parseInt(survival_td.text().replace(",", "")) > parseInt(h.ach_attributes.survival.replace(",", ""))) {
-            survival_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(survival_td.text().replace(",", "")) - parseInt(h.ach_attributes.survival.replace(",", ""))}</span>`)
-          } else if (parseInt(survival_td.text().replace(",", "")) < parseInt(h.ach_attributes.survival.replace(",", ""))) {
-            survival_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(survival_td.text().replace(",", "")) - parseInt(h.ach_attributes.survival.replace(",", ""))}</span>`)
-          }
-        });
-      });
+				quests_td = $(`td#ach_attr_quests_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}`)
+				if (parseInt(quests_td.text().replace(",", "")) > parseInt(h.ach_attributes.quests.replace(",", ""))) {
+					quests_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(quests_td.text().replace(",", "")) - parseInt(h.ach_attributes.quests.replace(",", ""))}</span>`)
+				} else if (parseInt(quests_td.text().replace(",", "")) < parseInt(h.ach_attributes.quests.replace(",", ""))){
+					quests_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(quests_td.text().replace(",", "")) - parseInt(h.ach_attributes.quests.replace(",", ""))}</span>`)
+				}
+
+				monsters_td = $(`td#ach_attr_monsters_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}`)
+				if (parseInt(monsters_td.text().replace(",", "")) > parseInt(h.ach_attributes.monsters.replace(",", ""))) {
+					monsters_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(monsters_td.text().replace(",", "")) - parseInt(h.ach_attributes.monsters.replace(",", ""))}</span>`)
+				} else if (parseInt(monsters_td.text().replace(",", "")) < parseInt(h.ach_attributes.monsters.replace(",", ""))){
+					monsters_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(monsters_td.text().replace(",", "")) - parseInt(h.ach_attributes.monsters.replace(",", ""))}</span>`)
+				}
+
+				caravan_td = $(`td#ach_attr_caravan_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}`)
+				if (parseInt(caravan_td.text()) > parseInt(h.ach_attributes.caravan)) {
+					caravan_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(caravan_td.text()) - parseInt(h.ach_attributes.caravan)}</span>`)
+				} else if (parseInt(caravan_td.text()) < parseInt(h.ach_attributes.caravan)){
+					caravan_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(caravan_td.text()) - parseInt(h.ach_attributes.caravan)}</span>`)
+				}
+
+				vault_td = $(`td#ach_attr_vault_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}`)
+				if (parseInt(vault_td.text().replace(",", "")) > parseInt(h.ach_attributes.vault.replace(",", ""))) {
+					vault_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(vault_td.text().replace(",", "")) - parseInt(h.ach_attributes.vault.replace(",", ""))}</span>`)
+				} else if (parseInt(vault_td.text().replace(",", "")) < parseInt(h.ach_attributes.vault.replace(",", ""))){
+					vault_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(vault_td.text().replace(",", "")) - parseInt(h.ach_attributes.vault.replace(",", ""))}</span>`)
+				}
+
+				survival_td = $(`td#ach_attr_survival_${h.name.replace(/\d+/g, '').replace(/\s/g, '')}`)
+				if (parseInt(survival_td.text().replace(",", "")) > parseInt(h.ach_attributes.survival.replace(",", ""))) {
+					survival_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(survival_td.text().replace(",", "")) - parseInt(h.ach_attributes.survival.replace(",", ""))}</span>`)
+				} else if (parseInt(survival_td.text().replace(",", "")) < parseInt(h.ach_attributes.survival.replace(",", ""))){
+					survival_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(survival_td.text().replace(",", "")) - parseInt(h.ach_attributes.survival.replace(",", ""))}</span>`)
+				}
+            
+			});
+		});
 
 
       $.getJSON(`database/${yesterday}.json`, function(data) {
         $.each(data.tribes, function(g, h) {
-          members_td = $(`td#tribe_members_${h.name.replace(/\d+/g, '').replace(/\s/g, '').replaceAll("/","")}`)
-          if (parseInt(members_td.text().replace(",", "")) > parseInt(h.guild_parameters.members.replace(",", ""))) {
-            members_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(members_td.text().replace(",", "")) - parseInt(h.guild_parameters.members.replace(",", ""))}</span>`)
-          } else if (parseInt(members_td.text().replace(",", "")) < parseInt(h.guild_parameters.members.replace(",", ""))) {
-            members_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(members_td.text().replace(",", "")) - parseInt(h.guild_parameters.members.replace(",", ""))}</span>`)
-          }
+            members_td = $(`td#tribe_members_${h.name.replace(/\d+/g, '').replace(/\s/g, '').replaceAll("/","")}`)
+            if (parseInt(members_td.text().replace(",", "")) > parseInt(h.guild_parameters.members.replace(",", ""))) {
+                members_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(members_td.text().replace(",", "")) - parseInt(h.guild_parameters.members.replace(",", ""))}</span>`)
+            } else if (parseInt(members_td.text().replace(",", "")) < parseInt(h.guild_parameters.members.replace(",", ""))) {
+                members_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(members_td.text().replace(",", "")) - parseInt(h.guild_parameters.members.replace(",", ""))}</span>`)
+            }
 
-          tribe_lvl_td = $(`tribe_lvl_${h.name.replace(/\d+/g, '').replace(/\s/g, '').replaceAll("/","")}`)
-          if (parseInt(tribe_lvl_td.text().replace(",", "")) > parseInt(h.guild_parameters.lvl.replace(",", ""))) {
-            tribe_lvl_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(tribe_lvl_td.text().replace(",", "")) - parseInt(h.guild_parameters.lvl.replace(",", ""))}</span>`)
-          } else if (parseInt(tribe_lvl_td.text().replace(",", "")) < parseInt(h.guild_parameters.lvl.replace(",", ""))) {
-            tribe_lvl_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(tribe_lvl_td.text().replace(",", "")) - parseInt(h.guild_parameters.lvl.replace(",", ""))}</span>`)
-          }
+            tribe_lvl_td = $(`tribe_lvl_${h.name.replace(/\d+/g, '').replace(/\s/g, '').replaceAll("/","")}`)
+            if (parseInt(tribe_lvl_td.text().replace(",", "")) > parseInt(h.guild_parameters.lvl.replace(",", ""))) {
+                tribe_lvl_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(tribe_lvl_td.text().replace(",", "")) - parseInt(h.guild_parameters.lvl.replace(",", ""))}</span>`)
+            } else if (parseInt(tribe_lvl_td.text().replace(",", "")) < parseInt(h.guild_parameters.lvl.replace(",", ""))) {
+                tribe_lvl_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(tribe_lvl_td.text().replace(",", "")) - parseInt(h.guild_parameters.lvl.replace(",", ""))}</span>`)
+            }
 
-          reactor_td = $(`td#tribe_reactor_${h.name.replace(/\d+/g, '').replace(/\s/g, '').replaceAll("/","")}`)
-          if (parseInt(reactor_td.text().replace(",", "")) > parseInt(h.guild_parameters.reactor.replace(",", ""))) {
-            reactor_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(reactor_td.text().replace(",", "")) - parseInt(h.guild_parameters.reactor.replace(",", ""))}</span>`)
-          } else if (parseInt(reactor_td.text().replace(",", "")) < parseInt(h.guild_parameters.reactor.replace(",", ""))) {
-            reactor_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(reactor_td.text().replace(",", "")) - parseInt(h.guild_parameters.reactor.replace(",", ""))}</span>`)
-          }
+            reactor_td = $(`td#tribe_reactor_${h.name.replace(/\d+/g, '').replace(/\s/g, '').replaceAll("/","")}`)
+            if (parseInt(reactor_td.text().replace(",", "")) > parseInt(h.guild_parameters.reactor.replace(",", ""))) {
+                reactor_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(reactor_td.text().replace(",", "")) - parseInt(h.guild_parameters.reactor.replace(",", ""))}</span>`)
+            } else if (parseInt(reactor_td.text().replace(",", "")) < parseInt(h.guild_parameters.reactor.replace(",", ""))) {
+                reactor_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(reactor_td.text().replace(",", "")) - parseInt(h.guild_parameters.reactor.replace(",", ""))}</span>`)
+            }
 
-          tribe_rank_td = $(`td#ext_attr_rank_${h.name.replace(/\d+/g, '').replace(/\s/g, '').replaceAll("/","")}`)
-          if (parseInt(tribe_rank_td.text().replace(",", "")) < parseInt(h.guild_results.rank.replace(",", ""))) {
-            tribe_rank_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(tribe_rank_td.text().replace(",", "")) - parseInt(h.guild_results.rank.replace(",", ""))}</span>`)
-          } else if (parseInt(tribe_rank_td.text().replace(",", "")) > parseInt(h.guild_results.rank.replace(",", ""))) {
-            tribe_rank_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(tribe_rank_td.text().replace(",", "")) - parseInt(h.guild_results.rank.replace(",", ""))}</span>`)
-          }
+            tribe_rank_td = $(`td#ext_attr_rank_${h.name.replace(/\d+/g, '').replace(/\s/g, '').replaceAll("/","")}`)
+            if (parseInt(tribe_rank_td.text().replace(",", "")) < parseInt(h.guild_results.rank.replace(",", ""))) {
+                tribe_rank_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(tribe_rank_td.text().replace(",", "")) - parseInt(h.guild_results.rank.replace(",", ""))}</span>`)
+            } else if (parseInt(tribe_rank_td.text().replace(",", "")) > parseInt(h.guild_results.rank.replace(",", ""))) {
+                tribe_rank_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(tribe_rank_td.text().replace(",", "")) - parseInt(h.guild_results.rank.replace(",", ""))}</span>`)
+            }
 
-          tribe_fame_td = $(`td#tribe_fame_${h.name.replace(/\d+/g, '').replace(/\s/g, '').replaceAll("/","")}`)
-          if (parseInt(tribe_fame_td.text().replace(",", "")) > parseInt(h.guild_results.fame.replace(",", ""))) {
-            tribe_fame_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(tribe_fame_td.text().replace(",", "")) - parseInt(h.guild_results.fame.replace(",", ""))}</span>`)
-          } else if (parseInt(tribe_fame_td.text().replace(",", "")) < parseInt(h.guild_results.fame.replace(",", ""))) {
-            tribe_fame_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(tribe_fame_td.text().replace(",", "")) - parseInt(h.guild_results.fame.replace(",", ""))}</span>`)
-          }
+            tribe_fame_td = $(`td#tribe_fame_${h.name.replace(/\d+/g, '').replace(/\s/g, '').replaceAll("/","")}`)
+            if (parseInt(tribe_fame_td.text().replace(",", "")) > parseInt(h.guild_results.fame.replace(",", ""))) {
+                tribe_fame_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(tribe_fame_td.text().replace(",", "")) - parseInt(h.guild_results.fame.replace(",", ""))}</span>`)
+            } else if (parseInt(tribe_fame_td.text().replace(",", "")) < parseInt(h.guild_results.fame.replace(",", ""))) {
+                tribe_fame_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(tribe_fame_td.text().replace(",", "")) - parseInt(h.guild_results.fame.replace(",", ""))}</span>`)
+            }
 
-          tribe_power_td = $(`td#tribe_power_${h.name.replace(/\d+/g, '').replace(/\s/g, '').replaceAll("/","")}`)
-          if (parseInt(tribe_power_td.text().replaceAll(",", "")) > parseInt(h.guild_results.power.replaceAll(",", ""))) {
-            tribe_power_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(tribe_power_td.text().replaceAll(",", "")) - parseInt(h.guild_results.power.replaceAll(",", ""))}</span>`)
-          } else if (parseInt(tribe_power_td.text().replaceAll(",", "")) < parseInt(h.guild_results.power.replaceAll(",", ""))) {
-            tribe_power_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(tribe_power_td.text().replaceAll(",", "")) - parseInt(h.guild_results.power.replaceAll(",", ""))}</span>`)
-          }
+            tribe_power_td = $(`td#tribe_power_${h.name.replace(/\d+/g, '').replace(/\s/g, '').replaceAll("/","")}`)
+            if (parseInt(tribe_power_td.text().replaceAll(",", "")) > parseInt(h.guild_results.power.replaceAll(",", ""))) {
+                tribe_power_td.append(`<span class="arrow-up ml-4"></span> <span class="text-green-500">${parseInt(tribe_power_td.text().replaceAll(",", "")) - parseInt(h.guild_results.power.replaceAll(",", ""))}</span>`)
+            } else if (parseInt(tribe_power_td.text().replaceAll(",", "")) < parseInt(h.guild_results.power.replaceAll(",", ""))) {
+                tribe_power_td.append(`<span class="arrow-down ml-4"></span> <span class="text-red-500">${parseInt(tribe_power_td.text().replaceAll(",", "")) - parseInt(h.guild_results.power.replaceAll(",", ""))}</span>`)
+            }
         });
       });
     })
@@ -259,7 +227,7 @@ $(function() {
         previous: "We cofnij troszku",
         next: "Napieraj dale strone",
         last: "Tył autobusu",
-      },zeroRecords: "COŚTY WYMYŚLIŁ XDDDDDDDD", infoFiltered: "(jakieś filtrowanie na kiju spośród _MAX_ dostępnych pozycji)",}
+      },zeroRecords: "Refresh your browser, or yell at Grok to update the stats xD", infoFiltered: "(jakieś filtrowanie na kiju spośród _MAX_ dostępnych pozycji)",}
 
          lengthMenu = [
       [-1, 10, 25, 50, 100, 2],
